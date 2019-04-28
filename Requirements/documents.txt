@@ -1,0 +1,10 @@
+In this folder, the following documents will exist:
+
+1- Customer Requirements
+2- Software Requirements Specification
+3- Software Requirements Specification Peer Review Sheet
+4- Risks Sheet
+5- Issues Sheet
+6- SIQ
+
+
