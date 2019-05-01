@@ -1,4 +1,4 @@
 In this folder, the following document will exist:
 
-1- High level design
-2- Detailed design
+1- System design
+2- Low Level design
