@@ -4,3 +4,7 @@ In this folder, the following documents will exist:
 2- Project Schedule
 3- Team structure
 4- Roles and responsiblites
+5- Testing plan
+6- Development plan
+7- Traceability Matrix
+8- Configuration Management plan
