@@ -1,5 +1,5 @@
 In this folder, the following documents will exist:
 
-1- Test cases
-2- Test Suites
-3- Bug Reports
+1- Test cases sheet
+2- Bug Reports
+3- Use cases
