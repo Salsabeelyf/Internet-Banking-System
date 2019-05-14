@@ -1,0 +1,59 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="post" id="regForm">
+            National_ID <input type = "text" name = "national_ID"><br><br>
+            Name <input type = "text" name = "name"><br><br>
+            Email <input type = "email" name = "email"><br><br>
+            Password <input type = "password" name = "password"><br><br>
+            Phone <input type = "text" name = "phone"><br><br>
+            <input type = "submit" name="register" value="Register" onclick="reg()"> 
+        </form>
+         <table>
+                        
+        </table>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        const Url = 'main.php';
+        let form = $('#regForm');
+        
+        
+        function reg(){
+            // get data from form
+        
+            let id = $('input[name=national_ID]').val();
+            let name = $('input[name=name]').val();
+            let email = $('input[name=email]').val();
+            let password = $('input[name=password]').val();
+            let phone = $('input[name=phone]').val();
+
+            let registered= false;
+            let data = {sender: "register",
+                        national_ID: id,
+                       name: name,
+                       password: password,
+                       email: email,
+                       phone: phone};
+            
+            $.post(Url,data,function(res,status){
+                res = String(res);
+                console.log(res);
+                /*let resp = JSON.parse(res);
+                registered = resp.registered;
+                if (registered){
+                    form.attr('action','index.html');
+                    form.submit();
+                console.log("trueeee");
+                
+            }else{
+                console.log(registered);
+                    
+            }
+               */ 
+            });
+        }
+    
+    </script>
+</html>
