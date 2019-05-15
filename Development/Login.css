@@ -1,0 +1,44 @@
+      body {
+	 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 5% 0% 10% 0%;
+ /* background-image : url("IBS.it_logo.png")*/
+	 background-repeat: no-repeat;
+    background-size: 100%;
+	 
+}
+	 
+ 
+ table {
+	 
+	 border-spacing: 10px;
+    border-collapse: separate;
+	background-color:blue;
+	-webkit-border-radius: 10px/10px;
+ }
+ 
+td{
+	color: white;
+}
+
+input[type=text]  {
+    width: 80%;
+    padding: 7 15px;
+    margin: 9;
+    box-sizing: border-box;
+	-webkit-border-radius: 7px/7px;
+	
+}
+
+input[type=password] {
+    width: 80%;
+    padding: 7 15px;
+    margin: 9;
+    box-sizing: border-box;
+	-webkit-border-radius: 7px/7px;
+}
+
+
+   
+  
