@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Registration </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="Regcss.css">
+
+</head>
+<body>
+ <img src="logo.JPG" alt="logo" id="imgimg">
+<hr/>
+
+<center>
+<form   action ="Verification.html"onsubmit="return( validateForm() )"   method="post" id="form_id"  >
+<div class="row">
+	<div class="col">
+			<label>User Name </label>
+	        <input type="text"  class="form-control"  name= "name"  id="UName" style="width:353px "/>
+		</div>
+		
+		<div class="col">
+			<label  disabled="inline-block">Email </label>
+			<input type="email" class="form-control"  name="email"  id="Email"  style="width:353px" />
+		
+		</div>
+		</div>
+		
+		<div class="row">
+		<small id="namehelp"  class="form-text text-muted" style="margin-left: 250px ;margin-top:6px"> characters and numbers. </small>
+		</div>
+		<div class="row">
+	<div class="col">
+			<label id="pass">Password </label>
+             <input type="password" class="form-control" name="password" id="Password"  style="width:353px"/>
+			
+		</div>
+		
+		<div class="col">
+			<label >Mobile Phone</label>
+			<input type="phone" class="form-control"  name="mobile" id="PhoneNumber"  style="width:345px"/>
+		
+		</div>
+		</div>
+		
+
+		<div class="row">
+		 <small id="passhelp" style="margin-left: 250px  ;margin-top:-3px" class="form-text text-muted"  >numbers , characters(capital and small) and special characters </small>
+			</div>
+			
+			<div class="row">
+			<div class="col">
+				<label >Confirm Password</label>
+				<input type="password" class="form-control"  name="Cpassword" id="ConfirmPassword"  style="width:345px"/>
+			
+		</div>
+		
+		<div class="col">
+			<label  for="sid"> <input  type="checkbox" id="sid" /> <span  id="checkspan"> Staff ID </span> </label>
+			<input type="text" class="form-control"  name="SID"   id="Staff"  style="width:353px">
+		</div>
+		</div>
+	
+	
+	<div class="row">
+			<div class="col">
+					<label  id="lid">National ID</label>
+					<input type="text" class="form-control"  name="NID" id="NationalID"  style="width:353px"/>
+		</div>
+    
+	  <br/>
+	  </div>
+
+  <button type="submit" class="btn btn-primary  btn-lg"  >Register</button>
+     &nbsp;    &nbsp;    &nbsp; <samp font="20px" block-style="none">OR </samp>  &nbsp;    &nbsp;    &nbsp;
+	 <a href="LoginButton.html"   >Login</a>
+	
+</form>
+</center>
+
+
+
+
+<script src="Reg_js.js"> </script>
+
+</body>
+
+
+
+
+</html>

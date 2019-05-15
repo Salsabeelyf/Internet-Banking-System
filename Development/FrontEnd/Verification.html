@@ -1,0 +1,48 @@
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+    <title> Verification </title>
+</head>
+
+<body>
+<img src="logo.JPG" alt="logo" style="width:197px ;height:89px; margin-left:64px; margin-top:20px">
+<hr/ >
+<center>
+      <form  action="Main.html" onsubmit="return(validateForm1())" >
+<label> Verification Code </label>
+ <input type="text" class="form-control" id="VERCode" maxlength= "6"placeholder="- - - - - -" style="width:6%">
+ </br>
+  <input class="btn-success" type="submit" value="Confirm" background="blue">
+  </center>
+
+ </form>
+ 
+ <script>
+ 
+ function validateForm1() {
+
+var Veri = document.getElementById("VERCode").value;
+if (isNaN(Veri) ) 
+{
+alert("You have entered an invalid format of data , Please try again")
+return false;
+}
+else if (Veri.length != 6)
+{
+alert("You have entered an invalid format of data , Please try again")
+return false;
+}
+else
+{
+return true;
+}
+}
+ 
+ 
+ </script>
+ 
+</body>
+</html>
