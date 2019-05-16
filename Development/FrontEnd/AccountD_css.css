@@ -1,0 +1,52 @@
+
+	
+#imgimg
+{
+    width: 232px;
+    height: 196px;
+    margin-left: 64px;
+    margin-top: -3px;
+}
+
+#customer_photo
+{
+       width: 84px;
+    height: 92px;
+    margin-left: 535px;
+    margin-top: 23px;
+}
+
+h6{
+margin-left: 499px;
+ margin-top: 20px;
+}
+
+h4{
+    float: left;
+    margin-left: 73px;
+    margin-top: 40px;
+    color: cornflowerblue;
+}
+
+h3
+{
+    float: left;
+    margin-left: 31px;
+    margin-top: 37px;
+    color: brown;
+}
+
+
+#Accounts_btn
+{
+margin-left: 140px;
+}
+
+#transfer
+{
+    margin-left: 92px;
+    float: left;
+    font-size: x-large;
+    color: cornflowerblue;
+}
+

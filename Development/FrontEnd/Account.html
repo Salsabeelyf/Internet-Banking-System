@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Account Details</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="AccountD_css.css">
+	
+</head>
+
+<body onload="Information();">
+<div class="row">
+ <div class="col">
+ <img src="logo.JPG" alt="logo" id="imgimg">
+	</div>
+	  <div class="col">
+ <img src="CustomerLogo.PNG" alt="logo" id="customer_photo">
+  <h6 id="username"> Customer User Name </h6>
+  	 <a href="Login.html" style="margin-left: 557px" color="blue" >Log out</a>
+	 </div>
+	 </div>
+	 <div class="container">
+	 <div class="row">
+	 <input type="button" onclick="location.href='MainPage_user.html' " value="Accounts"   id="Accounts_btn" class="btn btn-primary  btn-lg" /> 
+	</div>
+	 <hr/>
+	 
+	 	 <div class="row">
+		 <h4>Current &gt; &gt; Balance :  </h4>
+		 <h3 id="Balance">balance </h3>
+		 </div>
+		  
+		  		</br>
+       	 <div class="row">
+      <a  href="Transfer.html"   id="transfer"> Transfer</a>
+	    </div>
+		<br/> 
+
+       	 <div class="row">
+		<a  href="PreviousTransaction.html"   id="transfer"> PreviousTransaction</a>
+	  </div>
+	  
+	  </div>
+	  
+	  <script>
+	  function Information()
+	  {
+	  var UserName= "Alaa Gamal Othman";
+	    document.getElementById("username").innerHTML= UserName ;
+		
+		var Balance = 123456677.98;
+		document.getElementById("Balance").innerHTML= Balance ;
+		
+	  }
+	  </script>
+
+</body>
+
+
+</html>
