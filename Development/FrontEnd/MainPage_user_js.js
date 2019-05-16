@@ -51,7 +51,10 @@
 
     function myfunction(n)
 	 { 
-      var tablebody = document.getElementById("maintablebody");
+     var UserName= "alaa Gamal Othman";
+	 document.getElementById("username").innerHTML=UserName;
+
+	 var tablebody = document.getElementById("maintablebody");
       removerows(tablebody);
       addrows(tablebody, n);
     }
@@ -67,4 +70,6 @@
 	{
 			console.log("f2");
 	}
+	
+	
 
