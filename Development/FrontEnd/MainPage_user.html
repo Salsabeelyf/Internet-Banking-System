@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> MainPage </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="MainPage_user_css.css">
+	
+</head>
+
+<body   onload="myfunction(5);" >
+ <div class="row">
+ <div class="col">
+ <img src="logo.JPG" alt="logo" id="imgimg">
+	 </div>
+	  <div class="col">
+ <img src="logo.JPG" alt="logo" id="customer_photo">
+  <h6 > Customer User Name </h6>
+  	 <a href="Login.html" style="margin-left: 557px" color="blue" >Log out</a>
+	 </div>
+	 </div>
+	 	 <hr/>
+		 
+		 
+		 <table id="maintable"  >
+  
+    <tbody id="maintablebody">
+      <tr>
+	    
+	<td ><a  href="Account.html" class="btn"  id="A_id"> 1022234567</a> </td>     
+	  <td ><input type="button" onclick="f1();" value="Show Details"   id="View_id" class="btn btn-primary  btn-lg" />  </td> 
+	<td ><input type="button"   onclick= "f2();"  value="Show Previous Transaction"  id="Previous_id" class="btn btn-primary  btn-lg" />  </td> 
+		
+      </tr>
+	  
+
+    </tbody>
+  </table>
+		 
+	
+<script src="MainPage_user_js.js"> </script>
+
+</body>
+
+</html>
