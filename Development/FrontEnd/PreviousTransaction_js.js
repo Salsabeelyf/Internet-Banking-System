@@ -44,3 +44,10 @@ function validateForm()
 		return true;
 	}
 }
+
+function Information()
+{
+		   //Data Base
+			  var UserName= "alaa Gamal";
+	 document.getElementById("username").innerHTML=UserName;
+}

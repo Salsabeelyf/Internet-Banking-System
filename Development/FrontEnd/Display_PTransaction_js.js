@@ -1,8 +1,12 @@
  function myfunction( )
 	   {
-			
+		   //Data Base
+			  var UserName= "alaa Gamal";
+	 document.getElementById("username").innerHTML=UserName;
+			   
+			   
 			var getDisplayed= document.getElementById("optradio").value
-   
+     //Data Base
 			  var  Transaction =[  {amount:12345, From:1111 , to: 2222} , {amount:67890, From: 3333 , to: 4444} , {amount:78787, From: 5555 , to: 6666} 
 			   ,{amount:12345, From:1111 , to: 2222} , {amount:67890, From: 3333 , to: 4444} , {amount:78787, From: 5555 , to: 6666} ] ;
 			  var numbers= Transaction.length ;
