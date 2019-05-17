@@ -28,7 +28,7 @@
 	 <hr/>
 	 
 	 	 <div class="row">
-		 <h4>Current &gt; &gt; Balance :  </h4>
+		 <h4 id="typeofaccount">Current &gt; &gt; Balance :  </h4>
 		 <h3 id="Balance">balance </h3>
 		 </div>
 		  
@@ -49,6 +49,9 @@
 	  {
 	  var UserName= "Alaa Gamal Othman";
 	    document.getElementById("username").innerHTML= UserName ;
+		
+			var TypeofAcoount = "Saving";
+		document.getElementById("typeofaccount").innerHTML= TypeofAcoount + "&gt; &gt; Balance :" ;
 		
 		var Balance = 123456677.98;
 		document.getElementById("Balance").innerHTML= Balance ;
