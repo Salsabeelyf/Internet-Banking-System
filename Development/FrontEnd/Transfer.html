@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Transfer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="Transfer_css.css">
+	
+</head>
+<body 	onload="Information();" >
+	<div class="container">
+					<div class="row">
+			 <div class="col">
+			 <img src="logo.JPG" alt="logo" id="imgimg">
+				</div>
+				  <div class="col">
+			 <img src="CustomerLogo.PNG" alt="logo" id="customer_photo">
+			  <h6 id="username"> Customer User Name </h6>
+				 <a href="Login.html" style="margin-left: 557px" color="blue" >Log out</a>
+				 </div>
+				 </div>
+				 
+				 <div class="row">
+				 <input type="button" onclick="location.href='MainPage_user.html' " value="Accounts"   id="Accounts_btn" class="btn btn-primary  btn-lg" /> 
+				</div>
+				 <hr/>
+				 
+				 <center>
+				 
+	<form   action ="MainPage_user.html" onsubmit="return(validateForm())"   method="post" id="form_id"  >
+					<div class="row">
+								<div class="col">
+										<label>Amount </label>
+										<input type="text"  class="form-control"  name= "amount"  id="amountTransfer" style="width:353px "/>
+									</div>
+							
+									<div class="col">
+										<label  disabled="inline-block">Account ID </label>
+										<input type="text" class="form-control"  name="accountid"  id="Account_id"  style="width:353px" />
+									</div>
+					</div>
+					<br/>
+					<div class="row">
+							<label id="name">Bank Name </label>
+							<select name="Bank Name" class="form-control" id="BName">
+						    	<option value="BIS"> BIS </option>
+								<option value="CIB"> CIB </option>
+								<option value="CIB"> HSBC </option>
+								<option value="CIB"> QNB </option>
+								<option value="CIB"> AHLI </option>
+								<option value="CIB"> MISR </option>
+							</select>	
+								
+					</div>
+					<br/>
+					<br/>
+					<button type="submit" class="btn btn-primary  btn-lg"  >Submit</button>
+			</form>
+		</center>
+		
+	</div>
+	<script src="Transfer_js.js"> </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+	
+#imgimg
+{
+    width: 232px;
+    height: 196px;
+    margin-left: 64px;
+    margin-top: -3px;
+}
+
+#customer_photo
+{
+       width: 84px;
+    height: 92px;
+    margin-left: 535px;
+    margin-top: 23px;
+}
+
+h6{
+    margin-left: 531px;
+    margin-top: 20px;
+}
+
+#Accounts_btn
+{
+    margin-left: 140px;
+    width: 119px;
+    margin-top: 2px;
+}
+label{
+    float: left;
+    margin-left: 47px;
+    margin-top: 40px;
+}
+input{
+    width: 353px;
+    margin-top: 40px;
+    margin-left: 39px;
+
+}
+
+#BName
+{
+    float: left;
+    width: 352px;
+    margin-left: 52px;
+}
+
+#name
+{
+       float: left;
+    margin-left: 47px;
+    margin-top: 7px;
+}
