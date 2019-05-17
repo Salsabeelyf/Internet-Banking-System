@@ -20,7 +20,7 @@ let form = $("#FORM");
             res = res.substring(res.indexOf('}')+1);
             accountIds = res.split(',');
             let n = accountIds.length;
-            myfunction(n);  
+            setUpPage(n);  
             //console.log(accountIds[0]);
 
         });
@@ -83,7 +83,7 @@ let form = $("#FORM");
     }
 	
 
-    function myfunction(n)
+    function setUpPage(n)
 	 { 
      document.getElementById("username").innerHTML=clientName;
 	 var tablebody = document.getElementById("maintablebody");
@@ -142,5 +142,6 @@ let form = $("#FORM");
         //console.log(index);
                
         console.log(accountIds[index]);
+        
         
 	}
