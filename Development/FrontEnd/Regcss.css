@@ -1,0 +1,98 @@
+/*Start Global */
+
+
+
+
+label{
+    float: left;
+    margin-left: 47px;
+    margin-top: 40px;
+}
+
+
+
+input{
+    width: 353px;
+    margin-top: 40px;
+    margin-left: 39px;
+
+}
+#pass
+{
+    margin-top: 37px;
+    margin-left: 40px;
+}
+
+#Password
+{
+    width: 353px;
+    margin-top: 20px;
+    margin-left: 39px;
+}
+
+
+#ConfirmPassword 
+{
+    width: 353px;
+    margin-top: 32px;
+    margin-left: -29px;
+
+}
+
+#PhoneNumber
+{
+    width: 353px;
+    margin-top: 40px;
+    margin-left: -29px;
+}
+.check label
+{
+ display: block;
+  float: left;
+  padding-right: 10px;
+  padding-left: 22px;
+  text-indent: -22px;
+}
+
+.check input {
+  vertical-align: middle;
+}
+#checkspan {
+  margin-left : -48px;
+}
+
+#NationalID
+{
+    width: 353px;
+margin-top: -6px;
+    margin-left: -686px;
+	margin-bottom :25px;
+}
+
+#lid
+{
+    margin-top:-9px;
+    margin-left: 65px;
+}
+
+#Staff
+{
+    width: 353px;
+    margin-top: 68px;
+    margin-left: 6px;
+}
+#sid
+{
+margin-right : -117px;
+margin-left : -159px;
+}
+
+#imgimg
+{
+    width: 232px;
+    height: 196px;
+    margin-left: 64px;
+    margin-top: -3px;
+}
+
+
