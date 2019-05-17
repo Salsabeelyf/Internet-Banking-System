@@ -9,12 +9,12 @@
 
 </head>
 <body>
- <img src="logo.JPG" alt="logo" style="width:232px ;height:196px; margin-left:64px; margin-top:3px">
+ <img src="logo.JPG" alt="logo" style="width:197px ;height:89px; margin-left:64px; margin-top:20px">
 
 <hr/>
 
 <center>
-<form   action = "Main.html"onsubmit="return (validateLogin())"   method="post" id="form_id"  >
+<form method="post" id="logForm"  >
 <div class="row">
 	<div class="col">
 			<label  >User Name </label>
@@ -45,7 +45,7 @@
     
 
 
-  <button type="submit" class="btn btn-primary  btn-lg"  >Login</button>
+  <button type="submit" onclick="if(validateLogin()){login();}" class="btn btn-primary  btn-lg" name = "Login" >Login</button>
      &nbsp;    &nbsp;    &nbsp; <samp font="20px" block-style="none">OR </samp>  &nbsp;    &nbsp;    &nbsp;
 	 <a href="Registration.html"   >Register</a>
 	
@@ -56,15 +56,47 @@
 
 
 <script src="Log_js.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ const Url = 'main.php';
+ let form = $('#logForm');
+ function login(){
+
+            // get data from form
+        
+            let NID = $('input[name=NID]').val();
+            let name = $('input[name=name]').val();
+            let password = $('input[name=password]').val();
+
+            let registered= false;
+            let data = {sender: "Login",
+                        NID: NID,
+                        name: name,
+                        password: password,
+                        };
+            
+            $.post(Url,data,function(r,status){
+                r = String(r);
+                console.log(r);
+                if(r.includes("Login successful")){
+                    // redirect to home page
+                    form.attr("action","MainPage_user.html");
+                    form.submit();
+                }else{
+                    alert("This user is not registered!");
+                }
+            });
+        }
+
+
+
+ 
+ 
+ </script>
 
 </body>
 
 
-
-
-</html>
-
-</body>
 
 
 </html>

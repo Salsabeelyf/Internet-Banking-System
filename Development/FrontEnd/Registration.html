@@ -15,7 +15,7 @@
 <hr/>
 
 <center>
-<form   action ="Verification.html"onsubmit="return( validateForm() )"   method="post" id="form_id"  >
+<form  method="post" id="regForm">
 <div class="row">
 	<div class="col">
 			<label>User Name </label>
@@ -74,7 +74,7 @@
 	  <br/>
 	  </div>
 
-  <button type="submit" class="btn btn-primary  btn-lg"  >Register</button>
+  <button type="submit" onclick="if(validateRegistrationForm()){ reg();}" class="btn btn-primary  btn-lg" name = "Registration" >Register</button>
      &nbsp;    &nbsp;    &nbsp; <samp font="20px" block-style="none">OR </samp>  &nbsp;    &nbsp;    &nbsp;
 	 <a href="Login.html"   >Login</a>
 	
@@ -85,7 +85,48 @@
 
 
 <script src="Reg_js.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ const Url = 'main.php';
+ let form = $('#regForm');
+ function reg(){
 
+            // get data from form
+        
+            let NID = $('input[name=NID]').val();
+            let name = $('input[name=name]').val();
+            let email = $('input[name=email]').val();
+            let password = $('input[name=password]').val();
+            let mobile = $('input[name=mobile]').val();
+			let SID = $('input[name=SID]').val();
+
+            let registered= false;
+            let data = {sender: "Registration",
+                        NID: NID,
+                        name: name,
+                        password: password,
+                        email: email,
+                        mobile: mobile,
+						SID: SID};
+            
+            $.post(Url,data,function(res,status){
+                r = String(res);
+                console.log(r);
+				if(r.includes("Already Exist")){
+                    // redirect to registeration page
+					alert("This user is already registered!");
+                }else if (r.includes("new")){
+                    form.attr("action","Verification.html");
+                    form.submit();
+                }
+            });
+        }
+
+
+
+ 
+ 
+ </script>
 </body>
 
 

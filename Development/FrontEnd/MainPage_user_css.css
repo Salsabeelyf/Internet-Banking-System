@@ -15,8 +15,9 @@
     margin-top: 23px;
 }
 h6{
-margin-left: 499px;
- margin-top: 20px;
+    margin-left: 50%;
+    margin-top: 20px;
+    padding-left: 23%;
 
 }
 
@@ -35,22 +36,22 @@ button
     margin-left: 49px;
 }
 
-
-#View_id
+[id$="View_id"]
 {
     margin-top: 40px;
     margin-left: 267px;
 }
 
-#Previous_id
+[id$="Previous_id"]
 {
 margin-top: 40px;
     margin-left: 291px;
 }
 
-#A_id
+[id$="A_id"]
 {
 
     margin-left: 188px;
     font-size: x-large;
 }
+

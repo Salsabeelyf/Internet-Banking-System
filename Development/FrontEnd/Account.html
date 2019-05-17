@@ -6,11 +6,14 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
 	crossorigin="anonymous">
 	
-		<link rel="stylesheet" href="AccountD_css.css">
+    	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+	<link rel="stylesheet" href="AccountD_css.css">
 	
 </head>
 
-<body onload="Information();">
+<body>
 <div class="row">
  <div class="col">
  <img src="logo.JPG" alt="logo" id="imgimg">
@@ -28,7 +31,7 @@
 	 <hr/>
 	 
 	 	 <div class="row">
-		 <h4 id="typeofaccount">Current &gt; &gt; Balance :  </h4>
+		 <h4 id="typeofaccount">current &gt; &gt; Balance :  </h4>
 		 <h3 id="Balance">balance </h3>
 		 </div>
 		  
@@ -45,21 +48,63 @@
 	  </div>
 	  
 	  <script>
-	  function Information()
+		
+          let clientId = "29502011207841";
+          let clientName = "";
+          
+	window.onload = function(){
+        let Url = "main.php";
+        
+        // read data of logged in user
+        $.get('data.json',function(client){
+            //console.log(client.national_ID);
+            clientId = client.national_ID;
+            clientName = client.name;
+        
+            // get selected account id
+             $.get('showAccount.json',function(account){
+                console.log(account.account_ID);
+                accountId = account.account_ID;
+            
+                let data = {sender: "accountdetails",
+                account_ID: accountId
+                };
+                $.post(Url,data, function(res){
+                    res = res.substring(res.indexOf('}')+1);
+                    console.log(res);
+                    let type = "",balance="";
+
+                    if (res[0] == 'c')
+                    {
+                        type = res.substring(0,7);
+                        balance = res.substring(9,20);			
+                    }
+                    else if (res[0] == 's')
+                    {
+                        type = res.substring(0,6);
+                        balance = res.substring(8,20);			
+                    }
+
+                    setInformation(type,balance);
+
+
+                });
+             });
+        });
+            
+          
+    }
+	  function setInformation(type, balance)
 	  {
-	  var UserName= "Alaa Gamal Othman";
-	    document.getElementById("username").innerHTML= UserName ;
+	  document.getElementById("username").innerHTML= clientName ;
 		
-			var TypeofAcoount = "Saving";
-		document.getElementById("typeofaccount").innerHTML= TypeofAcoount + "&gt; &gt; Balance :" ;
-		
-		var Balance = 123456677.98;
-		document.getElementById("Balance").innerHTML= Balance ;
+          document.getElementById("typeofaccount").innerHTML= type + " &gt;&gt; Balance :" ;
+
+		document.getElementById("Balance").innerHTML= balance ;
 		
 	  }
 	  </script>
-
-</body>
+    </body>
 
 
 </html>

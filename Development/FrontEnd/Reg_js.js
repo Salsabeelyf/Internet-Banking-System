@@ -1,5 +1,5 @@
 
-function validateForm()
+function validateRegistrationForm()
 {
 
 	var clientname = document.getElementById("UName").value

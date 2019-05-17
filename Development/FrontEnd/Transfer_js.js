@@ -58,18 +58,18 @@ function validateForm()
 		
 	 	 else if (AccountID == "" )    		
 		 {
-			 alert("You have entered an invalid account , please check your balance"); 
+			 alert("You have entered an invalid account , please try again"); 
 			 return false;  
 		}
 			 else if (isNaN(AccountID) )    		
 		 {
-			 alert("You have entered an invalid account , please check your balance") ; 
+			 alert("You have entered an invalid account , please try again") ; 
 			 return false;
 		}
 		
 		else if(AccountID.length !=14)
 		{
-			alert("You have entered an invalid account , please check your balance") ; 
+			alert("You have entered an invalid account , please try again") ; 
 			 return false;
 		}
 		

@@ -1,7 +1,8 @@
 function validateLogin()
 {
-var Name = document.getElementById("UName").value
-var Password = document.getElementById("Password").value
+var clientname = document.getElementById("UName").value
+var pass = document.getElementById("Password").value
+
 var NID = document.getElementById("NationalID").value
 
  if (clientname== "")  { alert("1You have entered an invalid format of data , Please try again") ; return false; }
