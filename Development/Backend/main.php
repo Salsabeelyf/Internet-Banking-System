@@ -84,7 +84,10 @@ function userExist($conn1,$id){
         $msg = 'Already Exist';
 	 }else{
 		$msg = 'new' ;
-		    /*
+		    
+        $file = file_get_contents('data.json');
+        $client = json_decode($file);
+        $phone = $client->phone;
 		
 	// Account details
 	$apiKey = urlencode('UGnlML7AkCo-bR28vCVZhnMzo094GIO3GhfiCVqU4q');
@@ -106,7 +109,7 @@ function userExist($conn1,$id){
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$response = curl_exec($ch);
 	curl_close($ch);
-	*/
+	
 	 }
 	 return $msg;
 }
@@ -124,7 +127,7 @@ function Login($conn1,$id,$password,$name){
     
 	if($national_ID == $id && $pass == $password )
 	{
-		saveTojsonFile($national_ID, $uname, $email, $pass, $phone);
+		while(!saveTojsonFile($national_ID, $uname, $email, $pass, $phone)){}
         echo "Login successful! Welcome ".$row['client_name'];
         
 	}
@@ -201,6 +204,8 @@ function saveTojsonFile($id,$uname,$mail,$pass,$ph){
 	$text = json_encode ($data);
 
 	file_put_contents('data.json', $text);
+
+	return true;
 
 }
 ?>
