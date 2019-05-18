@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2019 at 08:07 PM
+-- Generation Time: May 18, 2019 at 03:44 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -40,8 +40,12 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`account_ID`, `account_type`, `account_balance`, `client_ID`) VALUES
-(1, 'current', 5000, '1234'),
-(2, 'saving', 2000, '1234');
+(123456, 'current', 10000, '29502011207841'),
+(154678, 'saving', 43000, '12345648978457'),
+(564789, 'saving', 5430, '78945612310124'),
+(684295, 'current', 11000, '78945612310124'),
+(753159, 'saving', 25000, '29502011207840'),
+(789456, 'current', 50000, '29502011207841');
 
 -- --------------------------------------------------------
 
@@ -62,43 +66,10 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`national_ID`, `client_name`, `client_email`, `password`, `client_mobile_no`) VALUES
-('', '', '', '', ''),
-('0', '', '', '', ''),
-('1', 'IBSdddd', 'jnbjkhjbj', '1235', '+201127855088'),
-('111111', 'IBS111', 'salsabeelsay@gmail.com', '1235', ''),
-('12', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('123123', 'ali', 'ali@yahoo.com', '1235', '1234'),
-('1234', 'Salsabeel', 'Salsabeel@gmail.com', '1234', '01094468330'),
-('123456', 'IBS', 'salsabeelsay@gmail.com', '452', '01234'),
-('1234564555', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('12345648111978', 'ahmed', 'salsabeelsay@gmail.com', '1235', '01234'),
-('12345648978115', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('12345648978222', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('12345648978555', 'IBSdddd', 'salsabeelsaygmail.com', '1235', '+201127855088'),
-('123458978555', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('1235', '55', '4', '1235', '7'),
-('125', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('2', 'IBSdddd', 'salsabeelsaygmail.com', '1235', '+201127855088'),
-('2147483647', 'Salsabeel', 'salsabeel@gmail.com', '1234', '1094468330'),
-('22', 'IBSdddd', 'salsabeelsay@gmail.com', '1235', '01234'),
-('2452', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('3232323232', 'IBSdddd', 'salsabeelsay@gmail.com', '1235', '+201127855088'),
-('44', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('444', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('4444444', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('454', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('45477', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('51541485', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('54674684154', 'IBSdddd', 'salsabeelsaygmail.com', '1235', '+201127855088'),
-('5468787', 'IBS111', 'salsabeelsay@gmail.com', '1235', '+201127855088'),
-('5544', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('5555', 'IBS111', 'salsabeelsay@gmail.com', '1235', '+201127855088'),
-('584524', 'IBSdddd', 'salsabeelsay@gmail.com', '1235', '01234'),
-('64897855512345', 'ahmed', 'fggv@d.com', '1235', '01234'),
-('65974', 'ahmed', 'fggv@d.com', '1235', '01234'),
-('787878', 'IBSdddd', 'salsabeelsay@gmail.com', '1235', '01234'),
-('941484515', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234'),
-('9843465', 'IBS111', 'salsabeelsay@gmail.com', '1235', '01234');
+('12345648978457', 'Sondos', 'sondos@gmail.com', 'Sondos_23', '01094468330'),
+('29502011207840', 'AlaaGamal', 'alaa@yahoo.com', 'Alaa_1234', '01094468330'),
+('29502011207841', 'Salsabeel', 'salsabeelsay@gmail.com', 'Ahmed@263', '01094468330'),
+('78945612310124', 'Khadija', 'dija@gmail.com', 'Dija_2468', '01234567891');
 
 -- --------------------------------------------------------
 
