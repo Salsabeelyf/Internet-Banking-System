@@ -1,18 +1,232 @@
+<!doctype html>
 <html>
 <head>
-<title> Previous Transaction</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-	crossorigin="anonymous">
-	
-		<link rel="stylesheet" href="PreviousTransaction_css.css">
-	
-</head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Display Previous Transaction</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/flatly/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Display_PTransaction_js.js"></script>
 
-<body onload="myfunction();">
-<!-- <body onload="Information();"> -->
-		  <div class="container">
+    <link rel="stylesheet" href="Display_PTransaction_css.css">
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto';
+            background-color: #fafafa;
+        }
+
+       .container { margin: 150px auto; }
+
+    </style>
+
+    <script type="text/javascript">
+	 /*var  people ={data[   { "amount":12345, "From":1111 , "to": 2222 , "bankname": "CIB"} , {"amount":67890, "From": 3333 , "to": 4444, "bankname": "Ahly"} , {"amount":78787, "From": 5555 , "to": 6666 , "bankname": "QNB"} ,
+								 {"amount":12345, "From":1111 , "to": 2222 ,  "bankname": "CIB"} , {"amount":67890, "From": 3333 , "to": 4444,"bankname": "Ahly"} , {"amount":78787, "From": 5555 , "to": 6666 ,"bankname": "QNB" } , 
+								 {"amount":12345, "From":1111 , "to": 2222 , "bankname": "CIB"} , {"amount":67890, "From": 3333 , "to": 4444, "bankname": "Ahly"} , {"amount":78787, "From": 5555 , "to": 6666 , "bankname": "QNB"} ,
+							   {"amount":12345, "From":1111 , "to": 2222 , "bankname": "CIB"} , {"amount":67890, "From": 3333 , "to": 4444 , "bankname": "Ahly"} , {"amount":78787, "From": 5555 , "to": 6666,"bankname": "QNB"}] } ;
+			 				*/					
+        var  people = {
+            data: [{
+                "amount": 1,
+                "From": 17678,
+                "to": 9999,
+                "bankname": "CIB"
+            }, {
+                "amount": 2,
+                "From": 12345,
+                "to": 45678,
+                "bankname": "Ahly"
+            }, {
+             "amount": 1568,
+                "From": 999989787,
+                "to": 45699978,
+                "bankname": "QNB"
+            }, {
+                "amount": 12,
+                "From": 12345,
+                "to": 45678,
+                "bankname": "CIB"
+            }, {
+                "amount": 12,
+                "From": 12345,
+                "to": 45678,
+                "bankname": "Ahly"
+            }, {
+                "amount": 6,
+                "From": 666666666,
+                "to": 666666666666,
+                "bankname": "ALAHLY"
+            }, {
+                 "amount": 7,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                 "amount": 8,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                 "amount": 9,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                 "amount": 10,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                 "amount": 11,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                 "amount": 12,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 13,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 14,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 15,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 16,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 17,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 18,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 19,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 20,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 21,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 22,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 23,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 24,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 25,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 26,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                    "amount": 27,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                    "amount": 28,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 29,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 30,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 31,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+            }, {
+                  "amount": 32,
+                "From": 7777777777777,
+                "to": 77777777777777777,
+                "bankname": "CIB"
+              } ]
+        }; 
+
+        $(document).ready(function () {
+            let $inp_rows = $('#inp_rows') ;
+            let params = window.location.search.substring(1).split('&') ;
+            for(let key in params) {
+                let tmp = params[key].split('=') ;
+                params[tmp[0]] = tmp[1] ;
+            }
+            const initRows = params.rows ? parseInt(params.rows) : 10 ;
+            $inp_rows.val(initRows) ;
+
+          
+                $('#people-table').smpSortableTable(people.data, initRows);
+            
+
+            $('#btn_ds').click(function(){
+			// var value =document.getElementsByTagName
+                let rows = !!$inp_rows.val() ? $inp_rows.val() : 10 ;
+                window.location.search = '?data=ds&rows=' + rows ;
+            }) ;
+
+            
+        });
+		
+		 function myfunction( )
+	   {
+		   //Data Base
+			  var UserName= "alaa Gamal";
+	         document.getElementById("username").innerHTML=UserName;
+			 }
+    </script>
+
+</head>
+<body onload = "myfunction()">
+
+ <div class="container">
 		<div class="row">
 				 <div class="col">
 				  <img src="logo.JPG" alt="logo" id="imgimg">
@@ -30,56 +244,49 @@
 		</div>
 			
 	<hr/>
-				 	
-		<table class="table">
-			<center>
-					<thead>
-						<tr>
-							<th> Amount </th>
-							<th> From </th>
-							<th> To </th>
-						</tr>
-					</thead>
-			</center>
-			<tbody  id="maintablebody">
-				<tr> 
-					<td><h5>45</h6> </td>
-					<td><h5>6767676 </h5></td>
-					<td><h5>8888888 </h5></td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<div id="Radio_div">
-		<div class="form-check" >
-                <input class="form-check-input" type="radio" name="exampleRadios" id="optradio" value="10" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                  10 per page 
-                </label>
-              </div>
-			  
-			  <br/>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="optradio" value="20">
-                <label class="form-check-label" for="exampleRadios2">
-               20 per page
-                </label>
-              </div>
-			    <br/>
-			  
-			                <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="optradio" value="30">
-                <label class="form-check-label" for="exampleRadios2">
-                 30 per page 
-                </label>
-              </div>
-			  
-		</div>
-		
-		
-	</div>
+	<label for="inp_rows">Number of Displayed Transaction per page </label>
+		<input id="inp_rows" type="number" value="10"/>
+		<button id="btn_ds" class="btn btn-primary">Submit</button>
+	
+	  <br/>
+	    <br/>
 	
 	
-	<script src="Display_Ptransaction_js.js"> </script>
-	</body>
+	<table id="people-table" class="table table-bordered table-striped table-dark">
+    <thead>
+    <tr>
+        <th id="amount">Amount</th>
+        <th id="From">From</th>
+        <th id="age" class="smp-not-sortable">To</th>
+        <th id="bankname">Bank NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+     <tr> <td>1234.8 </td>
+			<td>987654321 </td>
+			<td> 123456789</td>
+			<td>alaa </td>
+	</tr>
+	        
+    </tbody>
+</table>
+
+<br/>
+
+ </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
 </html>
