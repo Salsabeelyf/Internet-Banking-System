@@ -19,60 +19,83 @@
 <div class="row">
 	<div class="col">
 			<label>User Name </label>
-	        <input type="text"  class="form-control"  name= "name"  id="UName" style="width:353px "/>
+	        <input type="text"  class="form-control"  name= "name"  id="UName" style="width:353px ; margin-left:4px; "/>
+			</br>
+			<small id="namehelp"  class="form-text text-muted" style="margin-left: -86px ;margin-top:-20px" > characters and numbers. </small>
+	  <br/>
+	  	 		<small style = " color :red ;    float: left; margin-left: 223px; margin-top: -8px;" id="usererror"></small> 
 		</div>
 		
 		<div class="col">
 			<label  disabled="inline-block">Email </label>
 			<input type="email" class="form-control"  name="email"  id="Email"  style="width:353px" />
+						<br/>
+            <small style = " float: left; margin-left: 230px;margin-top: -13px; "id="mailhelp"> abc@ibs.com</small>  
+			<br/>
+            <small style = " color :red ;margin-left:-50px ;margin-top:--49px"  id="mailerror"></small>  
+	
 		
 		</div>
 		</div>
 		
-		<div class="row">
-		<small id="namehelp"  class="form-text text-muted" style="margin-left: 250px ;margin-top:6px"> characters and numbers. </small>
-		</div>
+		
+		
+ 
 		<div class="row">
 	<div class="col">
 			<label id="pass">Password </label>
              <input type="password" class="form-control" name="password" id="Password"  style="width:353px"/>
-			
+				 <br/>
+				 <small id="passhelp" style="margin-left: 133px  ;margin-top:-16px" class="form-text text-muted"  >numbers , characters(capital and small) and special characters </small>
+		        
+				<br/>
+				 		<small style = " color :red ;margin-left: -80px ;margin-top:-20px"  id="passerror"></small> 
 		</div>
 		
 		<div class="col">
 			<label >Mobile Phone</label>
-			<input type="phone" class="form-control"  name="mobile" id="PhoneNumber"  style="width:345px"/>
-		
+			<input type="phone" class="form-control"  name="mobile" id="PhoneNumber"  style="width:345px ;width: 345px; margin-left: -15px; margin-top: 28px;"/>
+<br/>
+<small style = "    float: left; margin-left: 236px;margin-top:--49px"  id="Mobhelp"> Only Numbers</small>  
+<br/>
+ <small style = " color :red ;margin-left: -77px ;margin-top:--49px"  id="Moberror"></small>  
+			
 		</div>
 		</div>
-		
-
-		<div class="row">
-		 <small id="passhelp" style="margin-left: 250px  ;margin-top:-3px" class="form-text text-muted"  >numbers , characters(capital and small) and special characters </small>
-			</div>
+			  
 			
 			<div class="row">
 			<div class="col">
 				<label >Confirm Password</label>
 				<input type="password" class="form-control"  name="Cpassword" id="ConfirmPassword"  style="width:345px"/>
+				<br/><small style = " color :red ;margin-left: -61px ;margin-top:-30px"  id="conferror"></small> 
 			
 		</div>
 		
 		<div class="col">
 			<label  for="sid"> <input  type="checkbox" id="sid" /> <span  id="checkspan"> Staff ID </span> </label>
 			<input type="text" class="form-control"  name="SID"   id="Staff"  style="width:353px">
+			<br/>
+				<small style = " color :red ;margin-left: -58 ;margin-top:--49px"  id="Stafferror"></small>  
 		</div>
 		</div>
 	
 	
-	<div class="row">
+	
+
+			<div class="row">
 			<div class="col">
 					<label  id="lid">National ID</label>
 					<input type="text" class="form-control"  name="NID" id="NationalID"  style="width:353px"/>
+							 <br/>
+				 <small id="passhelp" style=" float: left;margin-left: 236px; margin-top: -46px;" class="form-text text-muted"  >Numbers </small>
+		         <br/>
+				 <small style = " color :red ; float: left;margin-left: 231px; margin-top: -45px;" id="Niderror"></small>  
 		</div>
     
-	  <br/>
+	
 	  </div>
+	  
 
   <button type="submit" class="btn btn-primary  btn-lg"  >Register</button>
      &nbsp;    &nbsp;    &nbsp; <samp font="20px" block-style="none">OR </samp>  &nbsp;    &nbsp;    &nbsp;
