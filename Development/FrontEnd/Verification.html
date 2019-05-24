@@ -9,13 +9,25 @@
 
 <body>
 <img src="logo.JPG" alt="logo" style="width:197px ;height:89px; margin-left:64px; margin-top:20px">
-<hr/ >
+<hr/>
 <center>
       <form   id = "Verification_form" >
 <label> Verification Code </label>
+<<<<<<< HEAD
  <input type="text" class="form-control" id="VERCode" maxlength= "6"placeholder="- - - - - -" style="width:6%">
  </br>
   <input class="btn-success" type="submit" onclick="validateVerificationForm();" value="Confirm" background="blue">
+=======
+ <input type="text" class="form-control" id="VERCode" maxlength= "6"placeholder="- - - - - -" style="width:87px ;     margin-left: 12px;">
+
+ 		         <br/>
+				 <small style = " color :red ; float: left;margin-left: 640px; margin-top: -11px;" id="Vererror"></small>  
+				  </br>
+
+  <input class="btn-success" type="submit" value="Confirm" background="blue">
+  
+  
+>>>>>>> fe104a3f39b1253e24c4aa83dd90af21a27c1ef9
   </center>
 
  </form>
@@ -25,14 +37,23 @@
  function validateVerificationForm() {
 
 var Veri = document.getElementById("VERCode").value;
-if (isNaN(Veri) ) 
+var Error = document.getElementById("Vererror")
+
+if (Veri == "")
 {
-alert("You have entered an invalid format of data , Please try again")
+Error.innerHTML= "This Field is Mandatory" ;
+return false;
+}
+else if (isNaN(Veri) ) 
+{
+//alert("You have entered an invalid format of data , Please try again")
+Error.innerHTML= "Invaild Data" ;
 return false;
 }
 else if (Veri.length != 6)
 {
-alert("You have entered an invalid format of data , Please try again")
+//alert("You have entered an invalid format of data , Please try again")
+Error.innerHTML= "The Length must be 6" ;
 return false;
 }
      
