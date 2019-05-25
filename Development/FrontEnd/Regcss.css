@@ -6,7 +6,7 @@
 label{
     float: left;
     margin-left: 47px;
-    margin-top: 40px;
+    margin-top: 33px;
 }
 
 
@@ -27,15 +27,16 @@ input{
 {
     width: 353px;
     margin-top: 20px;
-    margin-left: 39px;
+    margin-left: 19px;
 }
 
 
 #ConfirmPassword 
 {
     width: 353px;
-    margin-top: 32px;
-    margin-left: -29px;
+margin-top: 20px;
+    margin-left: -46px;
+}
 
 }
 
@@ -65,7 +66,7 @@ input{
 {
     width: 353px;
 margin-top: -6px;
-    margin-left: -686px;
+    margin-left: -701px;
 	margin-bottom :25px;
 }
 
