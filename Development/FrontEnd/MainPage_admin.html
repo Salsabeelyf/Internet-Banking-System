@@ -1,0 +1,58 @@
+<html>
+<head>
+<title> MainPage </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="MainPage_admin_css.css">
+	
+</head>
+
+<body onload="Information();">
+		  <div class="container">
+						 <div class="row">
+						 <div class="col">
+						 <img src="logo.JPG" alt="logo" id="imgimg">
+							 </div>
+							  <div class="col">
+						 <img src="CustomerLogo.PNG" alt="logo" id="customer_photo">
+						  <h6 id="username"> Customer User Name </h6>
+							 <a href="Login.html" style="margin-left: 557px" color="blue" >Log out</a>
+							 </div>
+							 </div>
+				 <hr/>
+				 
+				 
+				 <center>			 
+	<form   action ="MainPage_user.html" onsubmit="return(validateForm())"   method="post" id="form_id"  >
+					<div class="row">
+								<div class="col">
+										<label>Account ID </label>
+										<input type="text"  class="form-control"  name= "amount"  id="AccountiD" style="width:353px "/>
+									</div>
+									
+									
+							<div class="col">
+							 	<button class="btn btn-primary  btn-lg"  id="viewbtn"   >View</button>
+							</div>
+							
+							<div class="col">
+							 	<button type="submit"  onclick="removeFunction()"  class="btn btn-primary  btn-lg"  formaction="#" id="removebtn" >Remove</button>
+							</div>
+					</div>
+					 <br/>
+					<div class="row">
+					       <a  href="Registration.html"   id="adduser"> Add User</a>
+					</div>
+					
+				
+	</form>
+		</center>
+				 
+		 </div>
+		 	<script src="MainPage_admin_js.js"> </script>
+
+</body>
+</html>

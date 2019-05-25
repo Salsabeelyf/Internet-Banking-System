@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>IBS</title>
+    </head>
+    <body>
+	<div id = "mydiv">
+	
+	</div>
+  
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		
+
+	/*
+	window.onload = function showmydata()
+	{
+		$.ajax ({
+		type: "GET",
+		url:"main.php",
+		data: {
+		sender:"accountdetails",
+		 account_ID: '2'
+		},
+		success: function showmydata (data) {
+			$("#mydiv").html(data);
+		}
+		});
+	*/
+	window.onload = function(){
+        let Url = "main.php";
+        let data = {sender: "accountdetails",
+		account_ID: '1'
+		};
+        $.post(Url,data, function(res){
+            res = res.substring(res.indexOf('}')+1);
+			console.log(res);
+			if (res[0] == 'c')
+			{
+				let type = res.substring(0,7);
+				let balance = res.substring(9,20);			
+				
+			$("#mydiv").html("<p>"+type+" >> Balance: "+balance+"</p>");
+			}
+			else if (res[0] == 's')
+			{
+				let type = res.substring(0,6);
+				let balance = res.substring(8,20);			
+				
+			$("#mydiv").html("<p>"+type+" >> Balance: "+balance+"</p>");
+			}
+			
+			
+			
+
+        });
+          
+    }
+	
+	
+	
+		</script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+
+#imgimg
+{
+    width: 232px;
+    height: 196px;
+    margin-left: 64px;
+    margin-top: -3px;
+}
+
+#customer_photo
+{
+       width: 84px;
+    height: 92px;
+    margin-left: 535px;
+    margin-top: 23px;
+}
+
+h6{
+    margin-left: 531px;
+    margin-top: 20px;
+}
+
+#Accounts_btn
+{
+    margin-left: 140px;
+    width: 119px;
+    margin-top: 2px;
+}
+
+#DM{
+    width: 143px;
+    float: left;
+    margin-left: 425px;
+    margin-top: 63px;
+
+}
+
+#DN{
+    width: 143px;
+    float: left;
+    margin-top: 63px;
+}
+
+#view{
+    float: left;
+    margin-left: 533px;
+    margin-top: 40px;
+	}
+
+#Npage
+{
+	margin-left:20px;
+}
+
+
+#Radio_div
+{
+    border-style: ridge;
+    float: left;
+    width: 137px;
+    margin-bottom: 92px;
+}
